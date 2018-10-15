@@ -1,0 +1,60 @@
+body {
+    background: #000;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.topNavBar{
+    margin: 20px 0;
+}
+.topNavBar > a {
+    padding-left: 16px;
+    font-family: "Arial Black";
+    float: left;
+    font-size: 24px;
+    color: #9a9da2 ;
+}
+.topNavBar > a > .rs{
+    font-size: 30px;
+    color: #e8676b;
+    margin-right: 4px;
+}
+
+.topNavBar > nav {
+    float: right;
+}
+
+.topNavBar > nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topNavBar > nav > ul > li {
+    float: left;
+    margin: 0 17px;
+}
+
+.topNavBar > nav > ul > li > a {
+    font-size: 13px;
+    color: #ddd;
+    font-weight: bold;
+    padding: 11px 0;
+    display: block;
+    border-bottom: 3px solid transparent;
+}
+
+.topNavBar > nav > ul > li > a:hover {
+    border-bottom: 3px solid #e8676b;
+}
+
+
+
+
