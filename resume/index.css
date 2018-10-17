@@ -18,6 +18,14 @@ hr {
     border-bottom: 1px solid #dedede;
 }
 
+ul, ol {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
 .clearfix::after {
     display: block;
     content: '';
@@ -88,8 +96,9 @@ hr {
 
 .userCard {
     max-width: 940px;
-    margin: 0 auto;
+    margin: -350px auto 0;
     background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .userCard .text {
@@ -137,13 +146,15 @@ hr {
     margin-bottom: 10px;
 }
 
-.userCard .welcome .triangle {
+.userCard .welcome::after {
+    content: '';
     display: block;
     border: 10px solid transparent;
     border-top: 0;
     border-left-color: #e8676b;
     position: absolute;
     bottom: -10px;
+    left: 10px;
 }
 
 .userCard .summary {
@@ -154,20 +165,160 @@ hr {
     background: #e8676b;
     text-align: center;
 }
-.userCard > footer.media a{
+
+.userCard > footer.media a {
     display: inline-block;
     border-radius: 50%;
     margin: 20px 16px;
     padding: 6px;
 }
-.userCard > footer.media a:hover{
-    background: rgba(0,0,0,0.1);
+
+.userCard > footer.media a:hover {
+    background: rgba(0, 0, 0, 0.1);
 }
+
 .userCard > footer.media .icon {
     color: #fff;
     width: 30px;
     height: 30px;
     vertical-align: top;
 }
+
+.downloadResume-wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.downloadResume {
+    font-size: 14px;
+    padding: 21px 55px;
+    line-height: 16px;
+    display: inline-block;
+    border: 1px solid #cdcdcd;
+    color: #3d4451;
+    border-radius: 3px;
+    transition: box-shadow 0.3s;
+    margin-bottom: 25px;
+}
+
+.downloadResume:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.selfIntroduction {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.skills,
+section.portfolio {
+    padding-top: 70px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.skills ol {
+    padding: 40px 50px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills ol li {
+    float: left;
+    width: 50%;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.skills .progressBar {
+    margin-top: 5px;
+    height: 5px;
+    background: #e8676b33;
+    border-radius: 2px;
+}
+
+.skills .progressBar .progress {
+    height: 100%;
+    width: 80%;
+    border-radius: 5px;
+    background: #e8676b;
+}
+
+.portfolio {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.portfolio nav {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.portfolio nav ol {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.portfolio nav ol li {
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.portfolio nav ol li:first-child {
+    margin-left: 0;
+}
+
+.portfolio nav .bar {
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.portfolio nav .bar .bar-inner {
+    height: 100%;
+    background: #e8676b;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.portfolio nav .bar.state-1 .bar-inner {
+    margin-left: 0;
+    width: 32px;
+}
+
+.portfolio nav .bar.state-2 .bar-inner {
+    margin-left: 65px;
+    width: 50px;
+}
+
+.portfolio nav .bar.state-3 .bar-inner {
+    margin-left: 140px;
+    width: 95px;
+}
+
+.portfolio .works {
+    position: relative;
+}
+
+.portfolio .works > .big,
+.portfolio .works > .small {
+    position: absolute;
+}
+
+
 
 
