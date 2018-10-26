@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #c6dce9;
+}
+a {
+    text-decoration: none;
+}
+
+kbd {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    width: 71px;
+    height: 69px;
+    border-radius: 8px;
+    margin: 0 12px 12px 0;
+    background-color: #f0f8ff;
+    color: #70818e;
+    text-align: center;
+    font-family: keyboard, "Arial Rounded", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+kbd > button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+    border-radius: 7px;
+    background: #c6dce9bf;
+    padding: 1px 3px;
+    border: 1px solid #c3d0d8;
+    color: #70818e;
+    cursor: pointer;
+}
+
+kbd:hover > button {
+    display: inline-block;
+}
+
+kbd .text{
+    position: absolute;
+    top: 4px;
+    left: 8px;
+}
+
+kbd img{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 8px;
+    bottom: 10px;
+}
+
+main {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    display: inline-block;
+}
+
+#main > div:nth-child(2) {
+margin-left: -20px;
+}
+
+#main > div:nth-child(3) {
+margin-left: -80px;
+}
+
+
+
