@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>画板</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="//at.alicdn.com/t/font_899812_1431bc85loa.js"></script>
+</head>
+<body>
+<!--<div id="canvas"></div>-->
+<canvas id="myCanvas"></canvas>
+<div id="actions" class="actions">
+  <svg id="pen" class="icon active" aria-hidden="true">
+    <use xlink:href="#icon-pen"></use>
+  </svg>
+  <svg id="eraser" class="icon" aria-hidden="true">
+    <use xlink:href="#icon-eraser"></use>
+  </svg>
+  <svg id="clear" class="icon" aria-hidden="true">
+    <use xlink:href="#icon-clear"></use>
+  </svg>
+  <svg id="save" class="icon" aria-hidden="true">
+    <use xlink:href="#icon-save"></use>
+  </svg>
+</div>
+<ul id="color" class="colors">
+  <li style="background: red"></li>
+  <li style="background: yellow"></li>
+  <li style="background: greenyellow"></li>
+  <li style="background: deepskyblue"></li>
+  <li style="background: blue"></li>
+  <li class="active" style="background: black"></li>
+</ul>
+<ul class="size">
+  <li id="thin" class="thin active"></li>
+  <li id="thick" class="thick"></li>
+</ul>
+<script type="application/javascript" src="main.js"></script>
+</body>
+</html>
