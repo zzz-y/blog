@@ -19,14 +19,11 @@ ul, ol {
     list-style: none;
 }
 
-#canvas {
-    background: red;
-    height: 100vh;
-    position: relative;
-}
-
 #myCanvas {
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .actions {
@@ -53,8 +50,8 @@ ul, ol {
 
 .colors {
     position: fixed;
-    top: 14px;
-    left: 210px;
+    top: 60px;
+    left: 20px;
 }
 
 .colors > li {
@@ -73,8 +70,8 @@ ul, ol {
 
 .size {
     position: fixed;
-    top: 14px;
-    left: 390px;
+    top: 90px;
+    left: 20px;
 }
 
 .size > li {
