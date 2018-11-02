@@ -53,7 +53,7 @@ function listenToUser(canvas) {
   function start(x, y) {
     using = true;
     if (eraserEnabled) {
-      eraserRect(x, y, 10);
+      eraserRect(x, y, lineWidth);
     } else {
       lastPoint = {x: x, y: y};
       drawCircle(x, y, lineWidth / 2);
@@ -64,7 +64,7 @@ function listenToUser(canvas) {
     if (!using) return;
 
     if (eraserEnabled) {
-      eraserRect(x, y, 10);
+      eraserRect(x, y, lineWidth);
     } else {
       var newPoint = {x: x, y: y};
       drawCircle(x, y, lineWidth / 2);
