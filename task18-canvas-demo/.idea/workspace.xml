@@ -34,7 +34,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-212">
+            <state relative-caret-position="148">
               <caret line="66" column="32" lean-forward="false" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
               <folding>
                 <element signature="n#!!block;n#autoSetCanvasSize#0" expanded="false" />
@@ -130,7 +130,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/gw/web-swt" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RunDashboard">
@@ -161,12 +161,12 @@
       <workItem from="1540882961283" duration="3560000" />
       <workItem from="1540946473146" duration="8654000" />
       <workItem from="1541033921224" duration="10733000" />
-      <workItem from="1541118882187" duration="2588000" />
+      <workItem from="1541118882187" duration="3193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25535000" />
+    <option name="totallyTimeSpent" value="26140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1197" y="0" width="730" height="1047" extended-state="0" />
@@ -338,7 +338,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
+        <state relative-caret-position="148">
           <caret line="66" column="32" lean-forward="false" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
           <folding>
             <element signature="n#!!block;n#autoSetCanvasSize#0" expanded="false" />
