@@ -6,41 +6,98 @@
     <link rel="stylesheet" href="./index.css">
     <script src="//at.alicdn.com/t/font_875946_x1tgmrxzcme.js"></script>
     <style type="text/css">
-        .loading{position: relative;height: 200px;width: 200px;}
-        .loading::before,.loading::after{content:'';position: absolute;background: #000;border-radius: 50%;width: 0;height: 0;top: 0;left: 0;bottom: 0;right: 0;margin: auto;animation: s 1.5s linear infinite;}
-        .loading::after{animation-delay: 0.75s;}
+        .loading {
+            position: relative;
+            height: 200px;
+            width: 200px;
+        }
+
+        .loading::before, .loading::after {
+            content: '';
+            position: absolute;
+            background: #000;
+            border-radius: 50%;
+            width: 0;
+            height: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation: s 1.5s linear infinite;
+        }
+
+        .loading::after {
+            animation-delay: 0.75s;
+        }
 
         @keyframes s {
-            0%{
+            0% {
                 width: 0;
                 height: 0;
                 opacity: 1;
             }
-            100%{
+            100% {
                 width: 100px;
                 height: 100px;
                 opacity: 0;
             }
         }
-        .icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
-        .site-welcome{position: fixed;display: none;top: 0;left: 0;width: 100%;height: 100%;justify-content: center;align-items: center;background: #fff;z-index: 1;}
-        .site-welcome.active{display: flex;}
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .site-welcome {
+            position: fixed;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            z-index: 1;
+        }
+
+        .site-welcome.active {
+            display: flex;
+        }
     </style>
 </head>
 <body>
 <div id="siteWelcome" class="site-welcome active">
     <div class="loading"></div>
 </div>
-<div class="topNavBar clearfix">
+<div id="topNavBar" class="topNavBar clearfix">
     <a class="logo" href="#">
         <span class="rs">RS</span>card
     </a>
     <nav>
         <ul class="clearfix">
-            <li><a href="#">关于</a></li>
-            <li><a href="#">技能</a></li>
-            <li><a href="#">作品</a></li>
-            <li><a href="#">博客</a></li>
+            <li><a href="#siteAbout">关于</a></li>
+            <li><a href="#siteSkills">技能</a></li>
+            <li class="menuTigger">
+                <a href="#siteWorks">作品</a>
+                <ul class="submenu">
+                    <li>作品1</li>
+                    <li>作品2</li>
+                    <li>作品3</li>
+                </ul>
+            </li>
+            <li class="menuTigger">
+                <a href="#">博客</a>
+                <ul class="submenu">
+                    <li>博客1</li>
+                    <li>博客2</li>
+                    <li>博客3</li>
+                </ul>
+            </li>
             <li><a href="#">日历</a></li>
             <li><a href="#">联系方式</a></li>
             <li><a href="#">其他</a></li>
@@ -51,7 +108,7 @@
     <div class="mask"></div>
 </div>
 <main>
-    <div class="userCard">
+    <div id="siteAbout" class="userCard">
         <div class="summary clearfix">
             <div class="picture">
                 <img src="./img/avatar.jpg" alt="头像">
@@ -99,7 +156,7 @@
         技能：前端开发，Rails 开发，Node.js 开发
     </p>
 </main>
-<section class="skills">
+<section id="siteSkills" class="skills">
     <div class="section-title">技能</div>
     <ol class="clearfix">
         <li>
@@ -140,7 +197,7 @@
         </li>
     </ol>
 </section>
-<section class="portfolio">
+<section id="siteWorks" class="portfolio">
     <div class="section-title">作品集</div>
     <nav>
         <ol class="clearfix">
@@ -154,23 +211,23 @@
     </nav>
     <script>
         portfolio1.onclick = function () {
-          portfolioBar.className='bar state-1'
+            portfolioBar.className = 'bar state-1'
         }
         portfolio2.onclick = function () {
-          portfolioBar.className='bar state-2'
+            portfolioBar.className = 'bar state-2'
         }
         portfolio3.onclick = function () {
-          portfolioBar.className='bar state-3'
+            portfolioBar.className = 'bar state-3'
         }
     </script>
     <div class="works" style="height: 597px">
         <div class="big" style="top: 0;left:0;">
             <img src="./img/1.jpg" alt="作品1">
         </div>
-        <div class="small" style="top: 0;left: 637px" >
+        <div class="small" style="top: 0;left: 637px">
             <img src="./img/2.jpg" alt="作品2">
         </div>
-        <div class="small"style="top: 312px;left: 637px">
+        <div class="small" style="top: 312px;left: 637px">
             <img src="./img/3.jpg" alt="作品3">
         </div>
     </div>
@@ -178,7 +235,36 @@
 <script>
     setTimeout(function () {
         siteWelcome.classList.remove('active');
-    }, 3000)
+    }, 2000);
+
+    window.onscroll = function () {
+        if (scrollY > 60) {
+            topNavBar.classList.add('sticky')
+        } else {
+            topNavBar.classList.remove('sticky')
+        }
+    };
+    let liTags = document.querySelectorAll('nav > ul > li');
+    for (let i = 0; i < liTags.length; i++) {
+        liTags[i].onmouseenter = function (e) {
+            e.currentTarget.classList.add('active');
+        };
+        liTags[i].onmouseleave = function (e) {
+            e.currentTarget.classList.remove('active');
+        };
+    }
+    let aTags = document.querySelectorAll('nav > ul > li>a');
+    for (let i = 0; i < aTags.length; i++) {
+        aTags[i].onclick = function (e) {
+            e.preventDefault();
+            let a = e.currentTarget;
+            let href = a.getAttribute('href');
+            let element = document.querySelector(href);
+            let top = element.offsetTop;
+            console.log(top);
+            window.scrollTo(0, top - 80);
+        };
+    }
 </script>
 </body>
 </html>
