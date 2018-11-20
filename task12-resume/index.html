@@ -108,7 +108,7 @@
   <div class="mask"></div>
 </div>
 <main>
-  <div id="siteAbout" class="userCard">
+  <div id="siteAbout" data-x class="userCard">
     <div class="summary clearfix">
       <div class="picture">
         <img src="./img/avatar.jpg" alt="头像">
@@ -156,7 +156,7 @@
     技能：前端开发，Rails 开发，Node.js 开发
   </p>
 </main>
-<section id="siteSkills" class="skills">
+<section id="siteSkills" data-x class="skills">
   <div class="section-title">技能</div>
   <ol class="clearfix">
     <li>
@@ -197,7 +197,7 @@
     </li>
   </ol>
 </section>
-<section id="siteWorks" class="portfolio">
+<section id="siteWorks" data-x class="portfolio">
   <div class="section-title">作品集</div>
   <nav>
     <ol class="clearfix">
@@ -236,7 +236,14 @@
 <script>
   setTimeout(function () {
     siteWelcome.classList.remove('active');
-  }, 2000);
+    findClosest();
+  }, 1000);
+
+  let specialTags = document.querySelectorAll('[data-x]');
+  let minIndex = 0;
+  for (let i = 0; i < specialTags.length; i++) {
+    specialTags[i].classList.add('offset');
+  }
 
   window.onscroll = function () {
     if (scrollY > 0) {
@@ -244,7 +251,9 @@
     } else {
       topNavBar.classList.remove('sticky')
     }
+    findClosest();
   };
+
   let liTags = document.querySelectorAll('nav > ul > li');
   for (let i = 0; i < liTags.length; i++) {
     liTags[i].onmouseenter = function (e) {
@@ -254,7 +263,6 @@
       e.currentTarget.classList.remove('active');
     };
   }
-  let aTags = document.querySelectorAll('nav > ul > li>a');
 
   function animate(time) {
     requestAnimationFrame(animate);
@@ -263,6 +271,7 @@
 
   requestAnimationFrame(animate);
 
+  let aTags = document.querySelectorAll('nav > ul > li > a');
   for (let i = 0; i < aTags.length; i++) {
     aTags[i].onclick = function (e) {
       e.preventDefault();
@@ -280,6 +289,22 @@
         })
         .start(); // Start the tween immediately.
     };
+  }
+
+  function findClosest() {
+    for (let i = 0; i < specialTags.length; i++) {
+      if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+        minIndex = i;
+      }
+    }
+    specialTags[minIndex].classList.remove('offset');
+    let li = document.querySelector('a[href="#' + specialTags[minIndex].id + '"]').parentNode;
+    let brother = li.parentNode.children;
+    for (let i = 0; i < brother.length; i++) {
+      brother[i].classList.remove('highlight');
+    }
+    li.classList.add('highlight');
+
   }
 </script>
 </body>

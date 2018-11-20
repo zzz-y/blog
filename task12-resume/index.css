@@ -90,7 +90,9 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.topNavBar nav > ul > li.active a::after {
+.topNavBar nav > ul > li.active a::after,
+.topNavBar nav > ul > li.highlight a::after
+{
     content: '';
     display: block;
     position: absolute;
@@ -302,6 +304,7 @@ section.portfolio {
     height: 5px;
     background: #e8676b33;
     border-radius: 2px;
+    overflow: hidden;
 }
 
 .skills .progressBar .progress {
@@ -309,6 +312,11 @@ section.portfolio {
     width: 80%;
     border-radius: 5px;
     background: #e8676b;
+    transform: translateX(0);
+    transition: all .5s;
+}
+.skills.offset .progress{
+    transform: translateX(-100%);
 }
 
 .portfolio {
@@ -373,4 +381,12 @@ section.portfolio {
 .portfolio .works > .big,
 .portfolio .works > .small {
     position: absolute;
+}
+[data-x].offset{
+    transform: translateY(50px);
+    animation: slideUp .5s;
+}
+[data-x]{
+    transform: translateY(0);
+    transition: all .5s;
 }
