@@ -1,0 +1,56 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+.window {
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.images {
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.images > .img {
+    padding: 150px 200px;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+}
+
+.images > .img.current{
+    left: 0;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.images > .img.leave{
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.images > .img.enter{
+    transform: translateX(100%);
+}
+
+.img:first-child {
+    background: #ed5535;
+}
+
+.img:nth-child(2) {
+    background: #eded32;
+}
+
+.img:nth-child(3) {
+    background: #2aed35;
+}
+
+.img:nth-child(4) {
+    background: #2428ed;
+}
+
+.img:last-child {
+    background: #a720ed;
+}
+
