@@ -2,14 +2,26 @@ let n;
 init();
 
 let size = $('.images > .img').length;
-setInterval(() => {
-  makeLeave(getImg(n))
-    .one('transitionend', (e) => {
-      makeEnter($(e.currentTarget));
-    });
-  makeCurrent(getImg(n + 1));
-  n += 1;
-}, 3000);
+let timer = setTimeInterval();
+
+document.addEventListener('visibilitychange', (e) => {
+  if (document.hidden) {
+    window.clearInterval(timer);
+  } else {
+    timer = setTimeInterval();
+  }
+})
+
+function setTimeInterval() {
+  return setInterval(() => {
+    makeLeave(getImg(n))
+      .one('transitionend', (e) => {
+        makeEnter($(e.currentTarget));
+      });
+    makeCurrent(getImg(n + 1));
+    n += 1;
+  }, 3000);
+}
 
 function getImg(n) {
   return $(`.images > .img:nth-child(${x(n)})`);

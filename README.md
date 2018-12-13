@@ -6,3 +6,5 @@
 ## task19 [画板demo](https://zzz-y.github.io/task/task18-canvas-demo)
 ## task30 [轮播](https://zzz-y.github.io/task/task30)
 ## task31 [无缝轮播](https://zzz-y.github.io/task/task31)
+## task33-1 [浮层](https://zzz-y.github.io/task/task33/浮层)
+## task33-2 [轮播](https://zzz-y.github.io/task/task33/轮播)

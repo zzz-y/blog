@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.window {
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.images {
+    display: flex;
+    transition: all 0.5s;
+}
+
+.images > .img {
+    padding: 150px 200px;
+    transition: all 0.5s;
+}
+
+.btn-group {
+    text-align: center;
+    margin: 0 auto;
+}
+
+button {
+    border: 1px solid #cccccc;
+    background: transparent;
+    padding: 5px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.img.img1 {
+    background: #ed5535;
+}
+
+.img.img2 {
+    background: #eded32;
+}
+
+.img.img3 {
+    background: #2aed35;
+}
+
+.img.img4 {
+    background: #2428ed;
+}
+
+.img.img5 {
+    background: #a720ed;
+}
+
