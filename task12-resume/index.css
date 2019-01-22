@@ -423,3 +423,7 @@ section.portfolio {
     margin: 20px 0;
     /*width: 80%;*/
 }
+.message .error{
+    color: red;
+    display: none;
+}

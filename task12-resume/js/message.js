@@ -50,7 +50,7 @@
         array.forEach((item) => {
           let li = document.createElement('li');
           li.innerText = `${item.name}：${item.content}`;
-          this. messageList.append(li);
+          this.messageList.append(li);
         })
       });
     },
@@ -58,16 +58,22 @@
       let messageForm = this.messageForm;
       messageForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        let content = messageForm.querySelector('input[name=content]').value;
-        let name = messageForm.querySelector('input[name=name]').value;
-        this.model.save(content, name).then(function (object) {
-          let li = document.createElement('li');
-          li.innerText = `${object.attributes.name}：${object.attributes.content}`;
-          let messageList = document.querySelector('#messageList');
-          messageList.append(li);
-          messageForm.querySelector('input[name=content]').value = '';
-        });
-
+        let content = messageForm.querySelector('input[name=content]').value.trim();
+        let name = messageForm.querySelector('input[name=name]').value.trim();
+        if(content.length>0&&name.length>0){
+          this.model.save(content, name).then(function (object) {
+            let li = document.createElement('li');
+            li.innerText = `${object.attributes.name}：${object.attributes.content}`;
+            let messageList = document.querySelector('#messageList');
+            messageList.append(li);
+            messageForm.querySelector('input[name=content]').value = '';
+          });
+        } else {
+          this.view.querySelector('#errorMessage').style.display = 'block';
+          setTimeout(()=>{
+            this.view.querySelector('#errorMessage').style.display = 'none';
+          }, 3000)
+        }
       });
     },
   };
