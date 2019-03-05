@@ -8,3 +8,4 @@
 ## task31 [无缝轮播](https://zzz-y.github.io/task/task31)
 ## task33-1 [浮层](https://zzz-y.github.io/task/task33/浮层)
 ## task33-2 [轮播](https://zzz-y.github.io/task/task33/轮播)
+## task43 [会动的简历](https://zzz-y.github.io/task/task43)
