@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录</title>
+  <style>
+    * {
+      margin: 0;padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      border: 1px solid red;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .form-wrapper {
+      border: 1px solid grey;
+      padding: 20px;
+    }
+
+    .form-wrapper .row {
+      padding: 10px;
+    }
+
+    .form-wrapper .row > label {
+      display: inline-block;
+      min-width: 4rem;
+    }
+  </style>
+</head>
+<body>
+<div class="form-wrapper">
+  <h1>登录</h1>
+  <form id="signUpForm">
+    <div class="row">
+      <label for="email">邮箱</label>
+      <input type="text" name="email" id="email">
+    </div>
+    <div class="row">
+      <label for="password">密码</label>
+      <input type="password" name="password" id="password">
+    </div>
+    <div class="row">
+      <input type="submit" value="登录">
+    </div>
+  </form>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  let $form = $('#signUpForm');
+  let hash = {};
+  $form.on('submit', (e) => {
+    e.preventDefault();
+    let need = ['email', 'password'];
+    need.forEach((name) => {
+      let value = $form.find(`[name=${name}]`).val();
+      hash[name] = value;
+    });
+    $.post('/sign_in', hash)
+      .then((res) => {
+        window.location.href = '/';
+        console.log('success', res);
+      }, (request) => {
+        console.log(request.responseJSON);
+      })
+  })
+</script>
+</body>
+</html>
