@@ -9,3 +9,5 @@
 ## task33-1 [浮层](https://zzz-y.github.io/task/task33/浮层)
 ## task33-2 [轮播](https://zzz-y.github.io/task/task33/轮播)
 ## task43 [会动的简历](https://zzz-y.github.io/task/task43-animation-resume/index)
+## task44-1 [动态皮卡丘](https://zzz-y.github.io/task/task44/animation-皮卡丘/index)
+## task44-2 [静态皮卡丘](https://zzz-y.github.io/task/task44/css-皮卡丘/index)
