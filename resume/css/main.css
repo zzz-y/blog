@@ -64,7 +64,6 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
     text-overflow: ellipsis;
 }
 
-
 .info-wrapper > .info-item > .title {width: 5em; color: #46bea9;}
 
 .banner-vertical {
@@ -103,13 +102,9 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
     margin-bottom: 2em;
 }
 
-.main .project-introduction .row {
-    margin-bottom: 2em;
-}
+.main .project-introduction .row {margin-bottom: 2em;}
 
-.main .project-introduction .time-wrapper {
-    display: inline-block;
-}
+.main .project-introduction .time-wrapper {display: inline-block;}
 
 .main .project-introduction .time {
     border-radius: 25px;
@@ -139,20 +134,15 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
     margin: -10px calc(100% - 10px);
 }
 
-.main .project-introduction h5{
-    color: #46bea9;
-}
-.main .project-introduction p {
-    margin-bottom: .5em;
-}
+.main .project-introduction h5 {color: #46bea9;}
 
-.main .project-introduction .href-link {
-    display: inline-block;
-}
+.main .project-introduction p {margin-bottom: .5em;}
 
-.main .project-introduction .href-link > a {
-    margin-right: 1em;
-}
+.main .project-introduction img {margin: .5em 0 1em;}
+
+.main .project-introduction .href-link {display: inline-block;}
+
+.main .project-introduction .href-link > a {margin-right: 1em;}
 
 @media screen and (max-width: 586px) {
     body {padding: 0;}
@@ -163,9 +153,7 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
 
     .main .introduce .title {margin-bottom: 1em;}
 
-    .main .project-introduction .time-wrapper {
-        display: none;
-    }
+    .main .project-introduction .time-wrapper {display: none;}
 
     .main .project-introduction .project-wrapper {
         flex: 0 0 95%;
@@ -178,7 +166,6 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
     body {padding: 0;}
 
     .main .introduce .title {width: 6em;}
-
 }
 
 @media screen and (min-width: 768px) {
@@ -188,14 +175,11 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
 
     .main .introduce .title {width: 4.5em;}
 
-    .main .project-introduction .time {
-        padding: 0 1.5em;
-    }
+    .main .project-introduction .time {padding: 0 1.5em;}
 }
 
 @media screen and (min-width: 1200px) {
     .main .introduce .title {width: 3.5em;}
-
 }
 
 @media screen and (min-width: 1600px) {
