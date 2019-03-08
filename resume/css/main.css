@@ -1,0 +1,95 @@
+* {
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+body {background-color: #ececec;padding: 1rem 1rem 1rem 0;height: 100vh;}
+
+.icon {width: 1em; height: 1em;
+    fill: currentColor;overflow: hidden;}
+
+.main {background-color: #ffffff;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);}
+
+.side {
+    padding: 4em 0 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.title-wrapper {margin-bottom: 2rem;}
+
+
+.title-wrapper > .split-line {
+    height: 1px;
+    background-color: #9c9a9a;
+    width: 50%;
+    margin: 1.5em auto;
+}
+
+.title-wrapper > h5 {color: #696969;}
+
+.title-wrapper .info-icon {
+    font-size: 30px;
+    line-height: 30px;
+    color: #696969;
+}
+
+.title-wrapper .info-icon:hover {
+    text-decoration: none;
+    color: #46bea9;
+}
+
+.split-triangle {
+    border-top: 2em solid #d6d6d6;
+    border-left: 500px solid transparent;
+}
+
+.info-wrapper {margin: 1em 0;}
+
+.info-wrapper > h5 {color: #46bea9;margin: 0 1.5em 1em;}
+
+.info-wrapper > .info-item {
+    display: flex;
+    border-bottom: 1px solid #aeaeae;
+    margin: 0 1.5em 1em;
+    padding: 0 1em;
+}
+
+.info-wrapper > .info-item > .info-icon {
+    color: #46bea9;
+    font-size: 24px;
+    line-height: 24px;
+    width: 25px;
+}
+
+.info-wrapper > .info-item > .info {
+    color: #383838;
+    font-size: 18px;
+    line-height: 18px;
+    padding-left: 1em;
+    margin-left: 1em;
+    border-left: 1px solid #aeaeae;
+    text-overflow: ellipsis;
+}
+
+
+.info-wrapper > .info-item > .title {width: 4em; color: #46bea9;}
+
+.banner-vertical {
+    margin: 1em 0;
+    padding: 2em 1.5em;
+    color: #fff;
+    background-color: #46bea9;
+    background-image: linear-gradient(135deg, #ececec 50%, transparent 50%),
+    linear-gradient(225deg, #ececec 50%, transparent 50%);
+    background-position: top left, top left, bottom left, bottom left;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
+}
+
+.banner-vertical > .describe {
+    border-bottom: 1px solid #131313;
+    margin-bottom: 1rem;
+}
+
+
