@@ -10,8 +10,10 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
     flex-direction: column;
     overflow-x: hidden;
 }
-
-.side > footer{
+.container-fluid{
+    position: relative;
+}
+footer{
     position: absolute;
     bottom: 5px;
     left: 1em;
@@ -166,6 +168,9 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
         flex: 0 0 95%;
         max-width: 95%;
         margin-left: 5%;
+    }
+    img{
+        width:100%;
     }
 }
 
