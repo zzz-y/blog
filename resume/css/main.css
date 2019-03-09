@@ -11,6 +11,12 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
     overflow-x: hidden;
 }
 
+.side > footer{
+    position: absolute;
+    bottom: 5px;
+    left: 1em;
+}
+
 .title-wrapper {margin-bottom: 2rem;}
 
 .title-wrapper > .split-line {
@@ -26,6 +32,7 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
     font-size: 30px;
     line-height: 30px;
     color: #696969;
+    text-decoration: none;
 }
 
 .title-wrapper .info-icon:hover {text-decoration: none;color: #46bea9;}
@@ -83,7 +90,7 @@ body {background-color: #ececec;padding: 1rem 1rem 0 0;height: 100%;}
     margin-bottom: 1rem;
 }
 
-.main {background-color: #ffffff;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);padding: 4em;}
+.main {margin-bottom:1em;background-color: #ffffff;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);padding: 4em;}
 
 .main .introduce {display: flex;}
 
